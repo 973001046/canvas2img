@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>canvas</title>
+</head>
+
+<body>
+  <h1>canvas画图</h1>
+  <!-- <img src="https://static.chuanghehui.com/school/1568614271698/1568614271698.jpg" alt=""> -->
+</body>
+<script src="./canvas.js"></script>
+<script>
+
+  // 调用 canvas画图
+  canvas2Img({
+    width: '607',
+    height: '700',
+    quality: 1,
+    views: [{
+      type: 'image',
+      width: '607',
+      height: '400',
+      left: 0,
+      top: 0,
+      src: 'https://vipadmin.chuanghehui.com/upload/pic/20200214/65fd6ef7b753304aab33359006693da3.jpg'
+    },
+    {
+      type: 'text',
+      content: '【我的天啊我的天啊我我的天啊我的天啊我的天啊我的天啊我的天啊我的天啊我的天天天天天天】',
+      width: 580,
+      fontSize: 20,
+      fontFamily: 'Arial',
+      color: '#000',
+      left: 0,
+      top: 450,
+      maxLineNumber: 1,
+      lineHeight: 30
+    }]
+  }, function (img) {
+    var image = new Image()
+    image.src = img
+    image.onload = function () {
+      document.body.appendChild(image)
+    }
+  })
+
+</script>
+
+</html>
